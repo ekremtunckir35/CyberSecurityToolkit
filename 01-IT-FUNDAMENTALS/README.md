@@ -89,7 +89,7 @@
 
 ### 💻 Bilgisayar Donanımı
 
-![Bilgisayar ve Siber Güvenlik Temelleri](./assets/4-donanim-temelleri.png)
+![Bilgisayar ve Siber Güvenlik Temelleri](./assets/2-it-fundamentals.png)
 
 **Temel Bileşenler**
 
@@ -213,7 +213,7 @@
 
 ### 🧱 Sistem Mimarisi — 7 Katman
 
-![Siber Güvenlik Mimarisi](./assets/5-siber-mimari.png)
+![Siber Güvenlik Mimarisi](./4-donanim-temelleri.png)
 
 | # | Katman | İçerik |
 |---|--------|--------|
@@ -229,7 +229,7 @@
 
 ### 🧱 Sanallaştırma ve Konteyner
 
-![IT Fundamentals'dan Siber Güvenliğe](./assets/2-it-fundamentals.png)
+![IT Fundamentals'dan Siber Güvenliğe](./assets/5-siber-mimari.png)
 
 | Kavram | Açıklama | Kullanım |
 |--------|----------|---------|
