@@ -35,22 +35,22 @@
 ## 📁 Klasör Yapısı
 
 ```
-01-IT-Fundamentals/
+01-IT-FUNDAMENTALS/
 │
-├── README.md                            ← Bu dosya
-├── assets/                              ← Görsel infografikler
+├── README.md
+├── assets/
 │   ├── 1-Siber_Güvenlik_Temel_Yol_Haritası.png
-│   ├── 2-IT_Fundementals-10_12_2025.png
+│   ├── 2-IT_Fundementals_10.12.2025.png
 │   ├── 3-Cihaz_Çalışması_ve_Ağ_Güvenliği.png
 │   ├── 4-Bilgisayar_ve_siber_güvenlik_temelleri.png
 │   └── 5-Siber_güvenlik_mimarisi_ve_katmanlar.png
 │
 └── notes/
-    ├── 1-IT_Fundamentals-09_12_2025.md  # Cybersecurity giriş, CIA Triad, Binary, Storage
-    ├── 2-IT_Fundamentals-10_12_2025.md  # Standartlar, Dosya Sistemleri, Donanım
-    ├── 3-IT_Fundamentals-11_12_2025.md  # CPU/GPU, BIOS, IoT, Mobil Güvenlik, Network
-    ├── 4-IT_Fundamentals-12_12_2025.md  # İşletim Sistemleri, Sanallaştırma, Konteyner
-    └── 5-IT_Fundamentals-15_12_2025.md  # Ağ Güvenliği, Uygulama Katmanı, Docker
+    ├── 1-IT_Fundementals-09_12_2025.md
+    ├── 2-IT_Fundamentals-10_12_2025.md
+    ├── 3-IT_Fundamentals-11_12_2025.md
+    ├── 4-IT_Fundamentals-12_12_2025.md
+    └── 5-IT_Fundamentals-15_12_2025.md
 ```
 
 ---
@@ -173,8 +173,6 @@
 
 ### 🌐 Kablosuz Teknolojiler ve IoT
 
-**Bağlantı Standartları**
-
 | Teknoloji | Kapsam | Güvenlik Notu |
 |-----------|--------|--------------|
 | Bluetooth | ~10 metre | Bluejacking, Bluesnarfing riski |
@@ -204,8 +202,6 @@
 | macOS | Kapalı kaynak | GUI | Geliştirme ortamı |
 | Android / iOS | Karma | GUI | Mobil güvenlik analizi |
 
-**Arayüz Türleri**
-
 | Tür | Açıklama | Örnek |
 |-----|----------|-------|
 | GUI | Grafik arayüz | Windows Masaüstü |
@@ -216,8 +212,6 @@
 ---
 
 ### 🧱 Sistem Mimarisi — 7 Katman
-
-> IT Fundamentals'ın tüm konuları tabandan yukarıya bir güvenlik mimarisinde katmanlanır:
 
 ![Siber Güvenlik Mimarisi ve Katmanlar](./assets/5-Siber_güvenlik_mimarisi_ve_katmanlar.png)
 
@@ -235,7 +229,7 @@
 
 ### 🧱 Sanallaştırma ve Konteyner
 
-![IT Fundamentals'dan Siber Güvenliğe](./assets/2-IT_Fundementals-10_12_2025.png)
+![IT Fundamentals'dan Siber Güvenliğe](./assets/2-IT_Fundementals_10.12.2025.png)
 
 | Kavram | Açıklama | Kullanım |
 |--------|----------|---------|
