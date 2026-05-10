@@ -28,7 +28,7 @@
 
 > IT Fundamentals → Network Fundamentals → Operating Systems → Cybersecurity Basics → Security Tools & Labs → Career / Certifications
 
-![Siber Güvenliğin Temel Haritası](./assets/1-Siber_Güvenlik_Temel_Yol_Haritası.png)
+![Siber Güvenliğin Temel Haritası](./assets/1-yol-haritasi.png)
 
 ---
 
@@ -39,11 +39,11 @@
 │
 ├── README.md
 ├── assets/
-│   ├── 1-Siber_Güvenlik_Temel_Yol_Haritası.png
-│   ├── 2-IT_Fundementals_10.12.2025.png
-│   ├── 3-Cihaz_Çalışması_ve_Ağ_Güvenliği.png
-│   ├── 4-Bilgisayar_ve_siber_güvenlik_temelleri.png
-│   └── 5-Siber_güvenlik_mimarisi_ve_katmanlar.png
+│   ├── 1-yol-haritasi.png
+│   ├── 2-it-fundamentals.png
+│   ├── 3-ag-guvenligi.png
+│   ├── 4-donanim-temelleri.png
+│   └── 5-siber-mimari.png
 │
 └── notes/
     ├── 1-IT_Fundementals-09_12_2025.md
@@ -89,7 +89,7 @@
 
 ### 💻 Bilgisayar Donanımı
 
-![Bilgisayar ve Siber Güvenlik Temelleri](./assets/4-Bilgisayar_ve_siber_güvenlik_temelleri.png)
+![Bilgisayar ve Siber Güvenlik Temelleri](./assets/4-donanim-temelleri.png)
 
 **Temel Bileşenler**
 
@@ -155,7 +155,7 @@
 
 ### 📡 Ağ Bileşenleri ve Cihaz Güvenliği
 
-![Cihaz Çalışması ve Ağ Güvenliği](./assets/3-Cihaz_Çalışması_ve_Ağ_Güvenliği.png)
+![Cihaz Çalışması ve Ağ Güvenliği](./assets/3-ag-guvenligi.png)
 
 | Cihaz | Görevi |
 |-------|--------|
@@ -213,7 +213,7 @@
 
 ### 🧱 Sistem Mimarisi — 7 Katman
 
-![Siber Güvenlik Mimarisi ve Katmanlar](./assets/5-Siber_güvenlik_mimarisi_ve_katmanlar.png)
+![Siber Güvenlik Mimarisi](./assets/5-siber-mimari.png)
 
 | # | Katman | İçerik |
 |---|--------|--------|
@@ -229,7 +229,7 @@
 
 ### 🧱 Sanallaştırma ve Konteyner
 
-![IT Fundamentals'dan Siber Güvenliğe](./assets/2-IT_Fundementals_10.12.2025.png)
+![IT Fundamentals'dan Siber Güvenliğe](./assets/2-it-fundamentals.png)
 
 | Kavram | Açıklama | Kullanım |
 |--------|----------|---------|
