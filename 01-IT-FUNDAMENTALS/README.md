@@ -28,7 +28,7 @@
 
 > IT Fundamentals → Network Fundamentals → Operating Systems → Cybersecurity Basics → Security Tools & Labs → Career / Certifications
 
-![Yol Haritasi](./assets/img1.png)
+![Yol Haritasi](https://github.com/user-attachments/assets/281d5f5a-a199-4f32-ab68-7830b0823553)
 
 ---
 
@@ -89,7 +89,7 @@
 
 ### 💻 Bilgisayar Donanımı
 
-![Donanim Temelleri](./assets/4-donanim-temelleri.png)
+![Donanim Temelleri](https://github.com/user-attachments/assets/246154d9-8258-4b0f-a529-f0bb955615ff)
 
 **Temel Bileşenler**
 
@@ -155,7 +155,7 @@
 
 ### 📡 Ağ Bileşenleri ve Cihaz Güvenliği
 
-![Ag Guvenligi](./assets/img3.png)
+![Ag Guvenligi](https://github.com/user-attachments/assets/438ace63-33ad-41d3-8ce7-3e5a368aeaf1)
 
 | Cihaz | Görevi |
 |-------|--------|
@@ -213,7 +213,7 @@
 
 ### 🧱 Sistem Mimarisi — 7 Katman
 
-![Siber Mimari](./assets/5-siber-mimari.png)
+![Siber Mimari](https://github.com/user-attachments/assets/21f367c2-63bb-4a28-9dbe-707b86feb939)
 
 | # | Katman | İçerik |
 |---|--------|--------|
@@ -229,7 +229,7 @@
 
 ### 🧱 Sanallaştırma ve Konteyner
 
-![IT Fundamentals](./assets/img2.png)
+![IT Fundamentals](https://github.com/user-attachments/assets/213de22d-848e-4768-ba81-3391dde6da45)
 
 | Kavram | Açıklama | Kullanım |
 |--------|----------|---------|
