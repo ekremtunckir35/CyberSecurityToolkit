@@ -28,7 +28,7 @@
 
 > IT Fundamentals → Network Fundamentals → Operating Systems → Cybersecurity Basics → Security Tools & Labs → Career / Certifications
 
-![Yol Haritasi](./assets/1-yol-haritasi.png)
+![Yol Haritasi](./assets/img1.png)
 
 ---
 
@@ -155,7 +155,7 @@
 
 ### 📡 Ağ Bileşenleri ve Cihaz Güvenliği
 
-![Ag Guvenligi](./assets/3-ag-guvenligi.png)
+![Ag Guvenligi](./assets/img3.png)
 
 | Cihaz | Görevi |
 |-------|--------|
@@ -229,7 +229,7 @@
 
 ### 🧱 Sanallaştırma ve Konteyner
 
-![IT Fundamentals](./assets/2-it-fundamentals.png)
+![IT Fundamentals](./assets/img2.png)
 
 | Kavram | Açıklama | Kullanım |
 |--------|----------|---------|
