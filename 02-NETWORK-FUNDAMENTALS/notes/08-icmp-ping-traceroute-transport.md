@@ -1,4 +1,13 @@
 # 🛡️ AĞ TEMELLERİ – DERS 8
+
+<div align="center">
+
+![Ders İnfografiği](../assets/08-packet-analysis-wireshark-network-tools.png)
+
+</div>
+
+---
+
 ## Kapsamlı Eğitim Notu
 ### Konu: ICMP, PING, Traceroute, Wireshark & Transport Katmanı
 

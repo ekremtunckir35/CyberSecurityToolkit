@@ -1,4 +1,13 @@
 ## Konu
+
+<div align="center">
+
+![Ders İnfografiği](../assets/06-ipv4-ipv6-nat-subnetting-dhcp.png)
+
+</div>
+
+---
+
 IPv4, IPv6, NAT, Default Gateway, Subnetting, DHCP ve ICMP'ye giris
 
 # ADIM 1 - Dersin Ana Haritasi

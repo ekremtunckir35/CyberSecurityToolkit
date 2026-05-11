@@ -2,6 +2,15 @@
 
 
 ## 1. Dersin Ana Haritasi
+
+<div align="center">
+
+![Ders İnfografiği](../assets/03-data-link-mac-arp-vlan.png)
+
+</div>
+
+---
+
 Ana odak: Data Link Layer, Ethernet, MAC Address, ARP, Broadcast/Collision Domain, VLAN ve Wireless LAN.
 
 Bu derste islenen ana konular:

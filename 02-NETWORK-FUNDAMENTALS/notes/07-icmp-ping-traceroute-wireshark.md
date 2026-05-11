@@ -1,5 +1,14 @@
 ## Ana Ders Haritası
 
+<div align="center">
+
+![Ders İnfografiği](../assets/07-layer3-dhcp-icmp-wireshark.png)
+
+</div>
+
+---
+
+
 Bu ders tek bir konu değil; **Subnetting -> DHCP -> NAT -> ICMP/Ping/Traceroute -> Wireshark** hattında ilerleyen bütünlüklü bir Network Fundamentals dersidir.
 
 Ana konular:

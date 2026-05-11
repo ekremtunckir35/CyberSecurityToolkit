@@ -1,4 +1,13 @@
 # NETWORK FUNDAMENTALS - 4
+
+<div align="center">
+
+![Ders İnfografiği](../assets/04-layer2-to-layer3-network-communication.png)
+
+</div>
+
+---
+
 ## Data Link Layer Tekrarı -> Wireless LAN -> Network Layer -> IPv4 Girişi
 
 

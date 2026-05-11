@@ -1,5 +1,14 @@
 # Network Fundamentals-1 
 
+<div align="center">
+
+![Ders İnfografiği](../assets/01-it-to-network-security-overview.png)
+
+</div>
+
+---
+
+
 ## 1. Konu Haritası
 
 ### Ana başlıklar

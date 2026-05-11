@@ -1,4 +1,13 @@
 # 🛡️ SİBER GÜVENLİK EĞİTİMİ
+
+<div align="center">
+
+![Ders İnfografiği](../assets/10-transport-application-layer-dns.png)
+
+</div>
+
+---
+
 ## Network Fundamentals – Ders 10
 ### Transport Layer Tekrarı & Application Layer / DNS
 

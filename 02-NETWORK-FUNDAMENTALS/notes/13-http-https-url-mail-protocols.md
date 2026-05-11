@@ -1,4 +1,13 @@
 # Ağ Temelleri — Ders 13
+
+<div align="center">
+
+![Ders İnfografiği](../assets/13-topologies-devices-http-mail-protocols.png)
+
+</div>
+
+---
+
 ## Network Topolojileri · Switch · Router · HTTP/HTTPS · URL · SMTP/POP3/IMAP
 
 # 🛡️ AĞ TEMELLERİ

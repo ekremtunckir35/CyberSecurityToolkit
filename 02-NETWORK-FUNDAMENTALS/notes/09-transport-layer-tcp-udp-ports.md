@@ -1,4 +1,13 @@
 # Network Fundamentals – Ders 9
+
+<div align="center">
+
+![Ders İnfografiği](../assets/09-transport-layer-tcp-udp-ports.png)
+
+</div>
+
+---
+
 ## Transport Layer · TCP · UDP · Port Kavramı
 
 > **Hedef:** Hiçbir teknik bilgisi olmayan biri bile anlasın diye hazırlandı. Sıfırdan, adım adım, analogilerle.

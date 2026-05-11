@@ -1,5 +1,14 @@
 ## ADIM 1 - Ana Başlıklar
 
+<div align="center">
+
+![Ders İnfografiği](../assets/05-network-fundamentals-backbone.png)
+
+</div>
+
+---
+
+
 Bu derste geçen ana konular:
 
 1. Network dersinin amacı

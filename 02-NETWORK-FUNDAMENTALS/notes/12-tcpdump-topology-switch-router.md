@@ -1,4 +1,13 @@
 # Ağ Temelleri — Ders 12
+
+<div align="center">
+
+![Ders İnfografiği](../assets/12-network-management-topology-switch-router.png)
+
+</div>
+
+---
+
 ## TCPDump · Network Miner · Netstat · Network Topolojileri · Switch · Router · Access Point
 
 # 🛡️ AĞ TEMELLERİ

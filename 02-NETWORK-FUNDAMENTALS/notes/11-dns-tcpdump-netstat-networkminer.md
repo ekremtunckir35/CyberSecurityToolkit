@@ -1,4 +1,13 @@
 # 🛡️ AĞ TEMELLERİ — DERS 11
+
+<div align="center">
+
+![Ders İnfografiği](../assets/11-dns-tcpdump-netstat-networkminer.png)
+
+</div>
+
+---
+
 ## Uzman Siber Güvenlik Eğitim Notu
 ### Konu: DNS, TCPDump, Netstat, Network Miner
 

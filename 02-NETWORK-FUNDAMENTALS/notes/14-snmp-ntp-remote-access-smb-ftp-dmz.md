@@ -1,4 +1,13 @@
 # Ağ Temelleri — Ders 14
+
+<div align="center">
+
+![Ders İnfografiği](../assets/14-snmp-ntp-remote-access-smb-ftp-dmz.png)
+
+</div>
+
+---
+
 ## HTTP Tekrarı · Mail Protokolleri · SNMP · NTP · Telnet · SSH · RDP · SMB · FTP · DMZ
 
 # 🛡️ AĞ TEMELLERİ

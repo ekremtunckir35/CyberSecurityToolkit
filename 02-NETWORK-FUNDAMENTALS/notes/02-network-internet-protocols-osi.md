@@ -1,5 +1,14 @@
 # Network Fundamentals-2 
 
+<div align="center">
+
+![Ders İnfografiği](../assets/02-data-packet-digital-journey.png)
+
+</div>
+
+---
+
+
 
 **Ders odağı:** Network temelleri, internetin gelişimi, protokoller, IP routing, OSI/TCP-IP modeli ve Data Link Layer.
 
