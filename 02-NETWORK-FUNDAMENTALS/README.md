@@ -34,123 +34,22 @@ Odak noktası şudur:
 
 ## 📚 Ders İçeriği
 
-| # | Ders | Başlık | Ana Konular |
+| Görsel | # | Başlık | Ana Konular |
 |:---:|:---:|---|---|
-| 🟢 | [01](notes/01-network-fundamentals-intro.md) | **Ağa Giriş & IT'den Güvenliğe** | IT → Network → Security yolu, temel kavramlar, hash, imza, cloud |
-| 🟢 | [02](notes/02-network-internet-protocols-osi.md) | **Network, İnternet & OSI Modeli** | Network nedir, endpoint, internet, protokoller, OSI/TCP-IP modeli |
-| 🟢 | [03](notes/03-data-link-ethernet-mac-arp-vlan.md) | **Data Link · Ethernet · MAC · ARP · VLAN** | Data Link Layer, LLC/MAC, Ethernet, ARP, Broadcast/Collision Domain, VLAN |
-| 🟢 | [04](notes/04-wireless-network-layer-ipv4.md) | **Wireless LAN & Network Layer & IPv4 Girişi** | Wireless LAN, PDU, Network Layer, IPv4 temelleri |
-| 🟢 | [05](notes/05-ipv4-ipv6-nat-subnetting-dhcp.md) | **IPv4 · IPv6 · NAT · Subnetting · DHCP** | IPv4/IPv6 karşılaştırma, NAT, Default Gateway, Subnetting temelleri, DHCP |
-| 🟢 | [06](notes/06-subnetting-dhcp-icmp-wireshark.md) | **Subnetting · DHCP · ICMP · Wireshark Girişi** | Subnetting derinlemesine, DHCP akışı, ICMP temelleri, Wireshark tanışma |
-| 🟢 | [07](notes/07-icmp-ping-traceroute-wireshark.md) | **ICMP · Ping · Traceroute · Wireshark** | ICMP protokolü, Ping analizi, Traceroute, Wireshark paket yakalama |
-| 🟢 | [08](notes/08-icmp-ping-traceroute-transport.md) | **ICMP Derinlemesine & Transport Layer Girişi** | ICMP derinlemesine, Wireshark analizi, TCP/UDP temelleri |
-| 🟢 | [09](notes/09-transport-layer-tcp-udp-ports.md) | **Transport Layer · TCP · UDP · Port Kavramı** | Transport Layer, TCP handshake, UDP, port numaraları, soket kavramı |
-| 🟢 | [10](notes/10-transport-review-application-dns.md) | **Transport Tekrarı & Application Layer & DNS** | Transport tekrar, Application Layer, DNS hiyerarşisi, DNS kayıt tipleri |
-| 🟢 | [11](notes/11-dns-tcpdump-netstat-networkminer.md) | **DNS · TCPDump · Netstat · Network Miner** | DNS derinlemesine, nslookup, tcpdump, netstat, .pcap analizi |
-| 🟢 | [12](notes/12-tcpdump-topology-switch-router.md) | **TCPDump · Topoloji · Switch · Router** | Paket filtreleme, network forensic, topolojiler, MAC table, routing, IPsec |
-| 🟢 | [13](notes/13-http-https-url-mail-protocols.md) | **HTTP/HTTPS · URL · Mail Protokolleri** | HTTP request/response, status code, SSL/TLS, URL yapısı, SMTP/POP3/IMAP |
-| 🟢 | [14](notes/14-snmp-ntp-remote-access-smb-ftp-dmz.md) | **SNMP · NTP · Uzak Erişim · SMB · FTP · DMZ** | Monitoring, zaman senkronizasyonu, Telnet/SSH/RDP, dosya paylaşımı, DMZ |
-
----
-
-## 🗺️ Ders Görselleri
-
-<table>
-<tr>
-<td align="center" width="25%">
-<a href="notes/01-network-fundamentals-intro.md">
-<img src="assets/01-it-to-network-security-overview.png" width="100%"/>
-</a>
-<b>Ders 01</b><br/>IT'den Network Security'ye
-</td>
-<td align="center" width="25%">
-<a href="notes/02-network-internet-protocols-osi.md">
-<img src="assets/02-data-packet-digital-journey.png" width="100%"/>
-</a>
-<b>Ders 02</b><br/>Network & Internet & OSI
-</td>
-<td align="center" width="25%">
-<a href="notes/03-data-link-ethernet-mac-arp-vlan.md">
-<img src="assets/03-data-link-mac-arp-vlan.png" width="100%"/>
-</a>
-<b>Ders 03</b><br/>Data Link & MAC & ARP
-</td>
-<td align="center" width="25%">
-<a href="notes/04-wireless-network-layer-ipv4.md">
-<img src="assets/04-layer2-to-layer3-network-communication.png" width="100%"/>
-</a>
-<b>Ders 04</b><br/>Wireless & Network Layer
-</td>
-</tr>
-<tr>
-<td align="center" width="25%">
-<a href="notes/05-ipv4-ipv6-nat-subnetting-dhcp.md">
-<img src="assets/05-network-fundamentals-backbone.png" width="100%"/>
-</a>
-<b>Ders 05</b><br/>IPv4 & IPv6 & NAT
-</td>
-<td align="center" width="25%">
-<a href="notes/06-subnetting-dhcp-icmp-wireshark.md">
-<img src="assets/06-ipv4-ipv6-nat-subnetting-dhcp.png" width="100%"/>
-</a>
-<b>Ders 06</b><br/>Subnetting & DHCP & ICMP
-</td>
-<td align="center" width="25%">
-<a href="notes/07-icmp-ping-traceroute-wireshark.md">
-<img src="assets/07-layer3-dhcp-icmp-wireshark.png" width="100%"/>
-</a>
-<b>Ders 07</b><br/>ICMP & Ping & Traceroute
-</td>
-<td align="center" width="25%">
-<a href="notes/08-icmp-ping-traceroute-transport.md">
-<img src="assets/08-packet-analysis-wireshark-network-tools.png" width="100%"/>
-</a>
-<b>Ders 08</b><br/>Wireshark & Transport Girişi
-</td>
-</tr>
-<tr>
-<td align="center" width="25%">
-<a href="notes/09-transport-layer-tcp-udp-ports.md">
-<img src="assets/09-transport-layer-tcp-udp-ports.png" width="100%"/>
-</a>
-<b>Ders 09</b><br/>TCP & UDP & Port
-</td>
-<td align="center" width="25%">
-<a href="notes/10-transport-review-application-dns.md">
-<img src="assets/10-transport-application-layer-dns.png" width="100%"/>
-</a>
-<b>Ders 10</b><br/>Application Layer & DNS
-</td>
-<td align="center" width="25%">
-<a href="notes/11-dns-tcpdump-netstat-networkminer.md">
-<img src="assets/11-dns-tcpdump-netstat-networkminer.png" width="100%"/>
-</a>
-<b>Ders 11</b><br/>DNS & TCPDump & Netstat
-</td>
-<td align="center" width="25%">
-<a href="notes/12-tcpdump-topology-switch-router.md">
-<img src="assets/12-network-management-topology-switch-router.png" width="100%"/>
-</a>
-<b>Ders 12</b><br/>Topoloji & Switch & Router
-</td>
-</tr>
-<tr>
-<td align="center" width="25%">
-<a href="notes/13-http-https-url-mail-protocols.md">
-<img src="assets/13-topologies-devices-http-mail-protocols.png" width="100%"/>
-</a>
-<b>Ders 13</b><br/>HTTP & HTTPS & Mail
-</td>
-<td align="center" width="25%">
-<a href="notes/14-snmp-ntp-remote-access-smb-ftp-dmz.md">
-<img src="assets/14-snmp-ntp-remote-access-smb-ftp-dmz.png" width="100%"/>
-</a>
-<b>Ders 14</b><br/>SNMP & NTP & DMZ
-</td>
-<td></td>
-<td></td>
-</tr>
-</table>
+| <img src="assets/01-it-to-network-security-overview.png" width="80"/> | [01](notes/01-network-fundamentals-intro.md) | **Ağa Giriş & IT'den Güvenliğe** | IT → Network → Security yolu, temel kavramlar, hash, imza, cloud |
+| <img src="assets/02-data-packet-digital-journey.png" width="80"/> | [02](notes/02-network-internet-protocols-osi.md) | **Network, İnternet & OSI Modeli** | Network nedir, endpoint, internet, protokoller, OSI/TCP-IP modeli |
+| <img src="assets/03-data-link-mac-arp-vlan.png" width="80"/> | [03](notes/03-data-link-ethernet-mac-arp-vlan.md) | **Data Link · Ethernet · MAC · ARP · VLAN** | Data Link Layer, LLC/MAC, Ethernet, ARP, Broadcast/Collision Domain, VLAN |
+| <img src="assets/04-layer2-to-layer3-network-communication.png" width="80"/> | [04](notes/04-wireless-network-layer-ipv4.md) | **Wireless LAN & Network Layer & IPv4 Girişi** | Wireless LAN, PDU, Network Layer, IPv4 temelleri |
+| <img src="assets/05-network-fundamentals-backbone.png" width="80"/> | [05](notes/05-ipv4-ipv6-nat-subnetting-dhcp.md) | **IPv4 · IPv6 · NAT · Subnetting · DHCP** | IPv4/IPv6 karşılaştırma, NAT, Default Gateway, Subnetting temelleri, DHCP |
+| <img src="assets/06-ipv4-ipv6-nat-subnetting-dhcp.png" width="80"/> | [06](notes/06-subnetting-dhcp-icmp-wireshark.md) | **Subnetting · DHCP · ICMP · Wireshark Girişi** | Subnetting derinlemesine, DHCP akışı, ICMP temelleri, Wireshark tanışma |
+| <img src="assets/07-layer3-dhcp-icmp-wireshark.png" width="80"/> | [07](notes/07-icmp-ping-traceroute-wireshark.md) | **ICMP · Ping · Traceroute · Wireshark** | ICMP protokolü, Ping analizi, Traceroute, Wireshark paket yakalama |
+| <img src="assets/08-packet-analysis-wireshark-network-tools.png" width="80"/> | [08](notes/08-icmp-ping-traceroute-transport.md) | **ICMP Derinlemesine & Transport Layer Girişi** | ICMP derinlemesine, Wireshark analizi, TCP/UDP temelleri |
+| <img src="assets/09-transport-layer-tcp-udp-ports.png" width="80"/> | [09](notes/09-transport-layer-tcp-udp-ports.md) | **Transport Layer · TCP · UDP · Port Kavramı** | Transport Layer, TCP handshake, UDP, port numaraları, soket kavramı |
+| <img src="assets/10-transport-application-layer-dns.png" width="80"/> | [10](notes/10-transport-review-application-dns.md) | **Transport Tekrarı & Application Layer & DNS** | Transport tekrar, Application Layer, DNS hiyerarşisi, DNS kayıt tipleri |
+| <img src="assets/11-dns-tcpdump-netstat-networkminer.png" width="80"/> | [11](notes/11-dns-tcpdump-netstat-networkminer.md) | **DNS · TCPDump · Netstat · Network Miner** | DNS derinlemesine, nslookup, tcpdump, netstat, .pcap analizi |
+| <img src="assets/12-network-management-topology-switch-router.png" width="80"/> | [12](notes/12-tcpdump-topology-switch-router.md) | **TCPDump · Topoloji · Switch · Router** | Paket filtreleme, network forensic, topolojiler, MAC table, routing, IPsec |
+| <img src="assets/13-topologies-devices-http-mail-protocols.png" width="80"/> | [13](notes/13-http-https-url-mail-protocols.md) | **HTTP/HTTPS · URL · Mail Protokolleri** | HTTP request/response, status code, SSL/TLS, URL yapısı, SMTP/POP3/IMAP |
+| <img src="assets/14-snmp-ntp-remote-access-smb-ftp-dmz.png" width="80"/> | [14](notes/14-snmp-ntp-remote-access-smb-ftp-dmz.md) | **SNMP · NTP · Uzak Erişim · SMB · FTP · DMZ** | Monitoring, zaman senkronizasyonu, Telnet/SSH/RDP, dosya paylaşımı, DMZ |
 
 ---
 
