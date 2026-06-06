@@ -394,6 +394,119 @@ OID nedir?
 
 ---
 
+---
+
+# 📚 BÖLÜM 5B — SNMP Versiyonları ve Güvenlik Farkları
+
+## 🎯 BUNU NEDEN ÖĞRENİYORUZ?
+
+SOC analistleri ağ izleme trafiğini incelerken SNMP versiyonunu bilmek zorundadır. v1 ve v2c kullanan cihazlar, parolayı açık metin olarak ağda taşır. Bu doğrudan güvenlik riski ve potansiyel alarm nedenidir.
+
+---
+
+## 5B.1 — SNMP Versiyonları Karşılaştırması
+
+SNMP'nin üç temel versiyonu vardır. Her biri farklı güvenlik seviyesi sunar.
+
+| Versiyon | Kimlik Doğrulama | Şifreleme | Risk Seviyesi |
+|---|---|---|---|
+| **SNMPv1** | Community String (cleartext) | Yok | 🔴 Yüksek |
+| **SNMPv2c** | Community String (cleartext) | Yok | 🔴 Yüksek |
+| **SNMPv3** | Kullanıcı adı + parola (hashli) | Evet (AES/DES) | ✅ Düşük |
+
+---
+
+## 5B.2 — Community String Nedir ve Neden Tehlikelidir?
+
+**Community String**, SNMPv1 ve v2c'de şifre yerine geçen bir metin dizisidir.
+
+Yaygın varsayılan değerler:
+
+```text
+public   → Okuma yetkisi (read-only)
+private  → Yazma yetkisi (read-write)
+```
+
+### Neden tehlikeli?
+
+Çünkü Community String ağda **şifrelenmeden, düz metin (cleartext) olarak** gider.
+
+Saldırgan Wireshark veya TCPDump ile trafiği dinlerse:
+
+- Community String'i okur.
+- Cihaza bağlanarak yapılandırmayı okuyabilir.
+- Write yetkisi varsa cihazı yeniden yapılandırabilir.
+
+## 🏠 Günlük Hayat Analojisi
+
+Community String, kapıya asılmış kilidi açık bırakan yedek anahtara benzer. Herkes anahtarın orada olduğunu biliyor, almak için tek yapması gereken o yoldan geçmek.
+
+---
+
+## 5B.3 — SNMPv3 Güvenlik Modelleri
+
+SNMPv3, Community String yerine kullanıcı tabanlı güvenlik (USM — User-based Security Model) kullanır.
+
+| Güvenlik Seviyesi | Açıklama |
+|---|---|
+| **noAuthNoPriv** | Kimlik doğrulama yok, şifreleme yok |
+| **authNoPriv** | Kimlik doğrulama var (MD5/SHA), şifreleme yok |
+| **authPriv** | Kimlik doğrulama var + şifreleme var (AES/DES) |
+
+> **HATIRLA:** Kurumsal ağda SNMPv3 + authPriv kombinasyonu kullanılmalıdır.
+
+---
+
+## 5B.4 — SOC Analisti Perspektifi
+
+Bir güvenlik uzmanı SNMP trafiğini incelerken şu soruları sorar:
+
+```text
+✔ Hangi SNMP versiyonu kullanılıyor?
+✔ v1 veya v2c varsa neden hâlâ kullanılıyor?
+✔ Community String varsayılan değer mi? (public / private)
+✔ SNMP UDP 161 portu dışarıya açık mı?
+✔ Yetkisiz bir cihaz SNMP sorgusu atıyor mu?
+```
+
+Wireshark'ta `udp.port == 161` filtresiyle SNMP trafiği incelendiğinde, v1/v2c paketlerinde Community String düz metin olarak görünür.
+
+---
+
+## ⚠️ KARMAŞTIRMA!
+
+| Kavram | Açıklama |
+|---|---|
+| Community String | v1/v2c'de cleartext şifre yerine geçen değer |
+| USM | v3'te kullanıcı tabanlı güvenlik modeli |
+| authPriv | v3'ün en güvenli modu |
+| SNMP Trap | Cihazın manager'a otomatik gönderdiği bildirim (port 162) |
+
+## ✅ HATIRLA!
+
+> SNMPv1 ve v2c cleartext çalışır → Dinleyebilen herkes community string'i okur.
+> SNMPv3 + authPriv → Kimlik doğrulama ve şifreleme birlikte çalışır.
+> Varsayılan community string "public" veya "private" ise değiştirilmesi zorunludur.
+
+---
+
+## 🧪 KENDİNİ TEST ET — Bölüm 5B
+
+### ❓ Soru 1
+SNMPv1 ve v2c neden güvensizdir?
+
+**CEVAP:** Community String'i şifreleme olmadan cleartext olarak ağda taşırlar. Trafiği dinleyen herkes bu değeri okuyabilir.
+
+### ❓ Soru 2
+SNMPv3'ün en güvenli güvenlik modu hangisidir?
+
+**CEVAP:** authPriv — hem kimlik doğrulama hem de şifreleme (AES/DES) kullanır.
+
+### ❓ Soru 3
+Varsayılan Community String değerleri nelerdir ve neden değiştirilmelidir?
+
+**CEVAP:** "public" (read) ve "private" (write). Bunlar herkesçe bilindiği için saldırganlar bu değerleri deneyerek erişim kazanmaya çalışır.
+
 # 📚 BÖLÜM 6 — NTP: Zaman Senkronizasyonu
 
 ## 🎯 BUNU NEDEN ÖĞRENİYORUZ?
