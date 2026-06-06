@@ -1226,6 +1226,8 @@ Bu saldırı native VLAN'ı sömürür.
 
 ## 🧪 KENDİNİ TEST ET — Bölüm 18B
 
+---
+
 ### ❓ Soru 1
 Trunk port ile access port arasındaki temel fark nedir?
 
