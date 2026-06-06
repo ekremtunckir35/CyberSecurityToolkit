@@ -979,6 +979,148 @@ NAT ne işe yarar?
 **CEVAP:** Private IP adreslerini public IP üzerinden internete çıkarır.
 
 ---
+---
+
+# 📚 BÖLÜM 11B — Static ve Dynamic Routing
+
+## 🎯 BUNU NEDEN ÖĞRENİYORUZ?
+
+Bir SOC analisti kurumun ağ topolojisini incelerken routing yapısını anlamak zorundadır. Routing tablosundaki anormal kayıtlar saldırı göstergesi olabilir. Static ve dynamic routing farkını bilmek log yorumlamayı ve ağ tasarımını doğru anlamayı sağlar.
+
+---
+
+## 11B.1 — Static Routing
+
+**Static Routing**, ağ yöneticisinin router'a manuel olarak yol tanımlamasıdır.
+
+```text
+Örnek: "10.10.0.0/24 ağına gitmek istiyorsan 192.168.1.1 adresine git."
+```
+
+### Özellikleri
+
+| Özellik | Açıklama |
+|---|---|
+| Yapılandırma | Manuel, ağ yöneticisi yazar |
+| Esneklik | Düşük — topoloji değişince güncelleme gerekir |
+| Güvenlik | Yüksek — tanımsız yol yoktur |
+| Kaynak kullanımı | Düşük — router CPU/RAM harcamaz |
+| Ölçeklenebilirlik | Zayıf — büyük ağlarda yönetimi zordur |
+
+### Nerede kullanılır?
+
+- Küçük ağlarda
+- Tek çıkış noktası olan şube bağlantılarında (stub network)
+- Varsayılan rota (default route) tanımlamada
+
+## 🏠 Günlük Hayat Analojisi
+
+Static routing, sabit yazılmış trafik yönlendirmesine benzer. "Bu sokaktan gidenler her zaman 5 numaralı kavşağa gider" kuralı gibi. Yol kapansa bile kural değişmez; biri elle güncellemelidir.
+
+---
+
+## 11B.2 — Dynamic Routing
+
+**Dynamic Routing**, router'ların birbirleriyle konuşarak en iyi yolu otomatik öğrenmesidir.
+
+Router'lar routing protokolü kullanarak:
+
+- Komşu router'ları keşfeder.
+- Ağ değişikliklerini paylaşır.
+- Routing tablosunu otomatik günceller.
+
+### Özellikleri
+
+| Özellik | Açıklama |
+|---|---|
+| Yapılandırma | Protokol kurulduktan sonra otomatik |
+| Esneklik | Yüksek — ağ değişince kendisi adapte olur |
+| Güvenlik | Daha düşük — kötü yapılandırılmış protokol route injection'a açık |
+| Kaynak kullanımı | Daha yüksek — router'lar sürekli iletişim kurar |
+| Ölçeklenebilirlik | Güçlü — büyük ağlarda gereklidir |
+
+### Yaygın Dynamic Routing Protokolleri
+
+| Protokol | Açıklama | Kullanım Alanı |
+|---|---|---|
+| **RIP** | Routing Information Protocol — eski, basit | Küçük ağlar |
+| **OSPF** | Open Shortest Path First — yaygın, verimli | Kurumsal iç ağlar |
+| **EIGRP** | Cisco tescilli, hızlı yakınsama | Cisco ağları |
+| **BGP** | Border Gateway Protocol — internetin omurgası | ISP'ler, büyük kurumlar |
+
+> **HATIRLA:** OSPF kurumsal iç ağların en yaygın dynamic routing protokolüdür. BGP ise farklı otonom sistemlerin (AS) birbirleriyle konuşmasını sağlar — internetin kendisi BGP üzerinde çalışır.
+
+---
+
+## 11B.3 — Static vs Dynamic Routing Karşılaştırması
+
+| | Static | Dynamic |
+|---|---|---|
+| Yapılandırma | Manuel | Otomatik |
+| Değişikliğe uyum | Manuel güncelleme gerekir | Kendisi adapte olur |
+| CPU/RAM kullanımı | Az | Daha fazla |
+| Hata riski | İnsan hatası | Protokol yanlış yapılandırması |
+| Güvenlik | Daha öngörülebilir | Route injection riski |
+| Büyük ağlara uyum | Zayıf | Güçlü |
+
+## 🏠 Günlük Hayat Analojisi
+
+Static routing, önceden basılmış harita gibidir. Yollar değişse de harita aynı kalır — birisi yeni harita basmalıdır.
+
+Dynamic routing ise gerçek zamanlı navigasyon uygulaması gibidir. Trafik sıkışınca alternatif yolu otomatik bulur, yol kapansa yeniden hesaplar.
+
+---
+
+## 11B.4 — SOC Analisti Perspektifi
+
+Routing tablosu siber güvenlikte önemli bir iz kaynağıdır:
+
+```text
+✔ Routing tablosunda bilinmeyen bir ağ var mı?
+✔ Default route beklenmedik bir IP'ye mi yönlendiriyor?
+✔ BGP'de yetkisiz route announcement yapılmış mı?
+✔ OSPF'de sahte router komşuluğu kurulmuş mu?
+```
+
+**Route Hijacking**, saldırganların routing protokollerini manipüle ederek trafiği kendi sistemleri üzerinden geçirmesidir. BGP hijacking en bilinen örneğidir.
+
+## ⚠️ KARMAŞTIRMA!
+
+| Kavram | Açıklama |
+|---|---|
+| Static Route | Manuel tanımlanan sabit rota |
+| Dynamic Route | Protokol aracılığıyla öğrenilen rota |
+| Default Route | Hiçbir spesifik rota eşleşmediğinde kullanılan genel rota (0.0.0.0/0) |
+| Route Hijacking | Routing protokolünü manipüle ederek trafiği çalma saldırısı |
+| OSPF | Kurumsal iç ağların en yaygın dynamic routing protokolü |
+| BGP | İnternet omurgasını yöneten protokol |
+
+## ✅ HATIRLA!
+
+> Static routing küçük ve sabit ağlar için uygundur.
+> Dynamic routing büyük ve değişken ağlarda şarttır.
+> OSPF kurumsal iç ağda, BGP internet omurgasında kullanılır.
+> Routing tablosundaki anormal kayıtlar saldırı göstergesi olabilir.
+
+---
+
+## 🧪 KENDİNİ TEST ET — Bölüm 11B
+
+### ❓ Soru 1
+Static ve dynamic routing arasındaki en temel fark nedir?
+
+**CEVAP:** Static routing'de rotalar ağ yöneticisi tarafından manuel yazılır ve değişmez. Dynamic routing'de router'lar protokol aracılığıyla birbirinden rota öğrenir ve ağ değişikliklerine otomatik uyum sağlar.
+
+### ❓ Soru 2
+OSPF hangi ortamda kullanılır?
+
+**CEVAP:** Kurumsal iç ağlarda (LAN/WAN). Hızlı yakınsama ve verimli çalışması nedeniyle büyük şirket ağlarının en yaygın dynamic routing protokolüdür.
+
+### ❓ Soru 3
+Route hijacking nedir ve neden tehlikelidir?
+
+**CEVAP:** Saldırganın routing protokolünü manipüle ederek trafiği kendi sistemi üzerinden geçirmesidir. Bu sayede trafiği dinleyebilir, değiştirebilir veya engelleyebilir. BGP hijacking'de tüm internet trafiğinin yanlış yönlendirilmesi söz konusu olabilir.
+
 
 # 📚 BÖLÜM 12 — Routing Table, Metric ve Next Hop
 
