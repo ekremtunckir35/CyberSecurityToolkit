@@ -1117,6 +1117,130 @@ Cevap: Hayir, switch tabanli kablolu aglarda da kullanilir.
 
 ---
 
+---
+
+# 📚 BÖLÜM 18B — VLAN Trunking ve 802.1Q
+
+## 🎯 BUNU NEDEN ÖĞRENİYORUZ?
+
+VLAN'ların birden fazla switch arasında nasıl taşındığını bilmeden VLAN güvenliğini anlayamazsın. Trunk portlar ve 802.1Q etiketleme, VLAN hopping saldırısının da temel mekanizmasıdır.
+
+---
+
+## 18B.1 — Access Port vs Trunk Port
+
+Switch portları iki farklı modda çalışabilir:
+
+| Port Türü | Ne Yapar? | Hangi Durum? |
+|---|---|---|
+| **Access Port** | Tek bir VLAN'a aittir | Son kullanıcı cihazı bağlantısı (PC, yazıcı) |
+| **Trunk Port** | Birden fazla VLAN'ı taşır | Switch ↔ Switch veya Switch ↔ Router bağlantısı |
+
+## 🏠 Günlük Hayat Analojisi
+
+Access port, tek bir departmanın kapısıdır. Muhasebe kapısından sadece muhasebe çalışanları geçer.
+
+Trunk port ise binanın ana koridorudur. Muhasebe, IT ve İK çalışanları aynı koridordan geçer — ama herkes kendi rozet rengiyle (VLAN etiketi) ayrışır.
+
+---
+
+## 18B.2 — 802.1Q Nedir?
+
+**IEEE 802.1Q**, trunk portlardan geçen Ethernet frame'lerine VLAN etiketinin nasıl ekleneceğini tanımlayan standarttır.
+
+Frame'e 4 byte'lık bir etiket (tag) eklenir:
+
+```text
+Normal Ethernet Frame:
+[ Dest MAC | Src MAC | EtherType | Data | FCS ]
+
+802.1Q Etiketli Frame:
+[ Dest MAC | Src MAC | 802.1Q Tag (4 byte) | EtherType | Data | FCS ]
+```
+
+**802.1Q Tag içeriği:**
+
+| Alan | Boyut | Açıklama |
+|---|---|---|
+| TPID | 16 bit | Her zaman 0x8100 — "bu frame etiketlidir" işareti |
+| PCP | 3 bit | Öncelik değeri (QoS) |
+| DEI | 1 bit | Drop Eligible Indicator |
+| VLAN ID | 12 bit | Hangi VLAN olduğunu belirtir (1–4094 arası) |
+
+> **HATIRLA:** Switch bir trunk porttan frame aldığında 802.1Q etiketine bakar ve paketin hangi VLAN'a ait olduğunu anlar. Etiketi soyarak doğru access porta iletir.
+
+---
+
+## 18B.3 — Native VLAN Nedir?
+
+Trunk portlarda bazı frame'ler **etiket olmadan** geçebilir. Bu frame'ler **Native VLAN**'a aittir.
+
+Varsayılan olarak native VLAN, VLAN 1'dir.
+
+**Güvenlik Riski:**
+
+Saldırgan native VLAN'ı kullanarak etiketlenmemiş trafik gönderebilir ve farklı VLAN'lara sızabilir. Bu yüzden:
+
+- Native VLAN, kullanılmayan bir VLAN ID'siyle değiştirilmelidir.
+- VLAN 1 hiçbir zaman native VLAN olarak bırakılmamalıdır.
+
+---
+
+## 18B.4 — VLAN Hopping Saldırısı
+
+VLAN Hopping, bir saldırganın bulunduğu VLAN'dan başka bir VLAN'a yetkisiz geçiş yapmasıdır. İki yöntemi vardır:
+
+### Yöntem 1: Switch Spoofing
+
+Saldırgan kendi cihazını switch gibi davrandırarak trunk bağlantısı kurar. Böylece tüm VLAN trafiğini dinleyebilir.
+
+**Önlem:** Access portlarda trunk modu kapatılmalıdır (`switchport mode access`).
+
+### Yöntem 2: Double Tagging (Çift Etiket)
+
+Saldırgan frame'e iç içe iki 802.1Q etiketi ekler. Birinci switch dıştaki etiketi soyar, içteki etiketle frame hedef VLAN'a ulaşır.
+
+Bu saldırı native VLAN'ı sömürür.
+
+**Önlem:** Native VLAN kullanılmayan bir VLAN ID ile değiştirilmelidir.
+
+---
+
+## ⚠️ KARMAŞTIRMA!
+
+| Kavram | Açıklama |
+|---|---|
+| Access Port | Tek VLAN — son kullanıcı bağlantısı |
+| Trunk Port | Çok VLAN — switch-switch bağlantısı |
+| 802.1Q | VLAN etiketleme standardı |
+| Native VLAN | Trunk'ta etiketsiz geçen VLAN (güvenlik riski) |
+| VLAN Hopping | VLAN izolasyonunu aşma saldırısı |
+
+## ✅ HATIRLA!
+
+> Access port = Tek VLAN. Trunk port = Çok VLAN, 802.1Q etiketiyle ayrışır.
+> Native VLAN = Etiketlenmeyen trafik = Güvenlik riski.
+> VLAN Hopping önlemi: trunk modu kapat, native VLAN'ı değiştir.
+
+---
+
+## 🧪 KENDİNİ TEST ET — Bölüm 18B
+
+### ❓ Soru 1
+Trunk port ile access port arasındaki temel fark nedir?
+
+**CEVAP:** Access port yalnızca tek bir VLAN'a hizmet eder. Trunk port birden fazla VLAN trafiğini aynı fiziksel bağlantıdan 802.1Q etiketiyle taşır.
+
+### ❓ Soru 2
+802.1Q etiketi neden eklenir?
+
+**CEVAP:** Trunk porttan geçen frame'in hangi VLAN'a ait olduğunu belirtmek için. Etiket olmasa switch frame'i hangi VLAN'a ileteceğini bilemez.
+
+### ❓ Soru 3
+Native VLAN neden güvenlik riski oluşturur ve nasıl önlenir?
+
+**CEVAP:** Native VLAN frame'leri etiketsiz geçtiği için çift etiket (double tagging) saldırısına açıktır. Önlem: native VLAN'ı kullanılmayan bir VLAN ID'siyle değiştirmek ve VLAN 1'i hiçbir zaman native VLAN olarak bırakmamak.
+
 ## 19. Wireless LAN ve IEEE 802.11
 
 ### Bu nedir?
